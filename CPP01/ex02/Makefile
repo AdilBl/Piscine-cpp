@@ -1,14 +1,12 @@
 SOURCES_FILES    =	main.cpp\
-					zombie.cpp\
-					zombieHorde.cpp\
 
-HEADER            =    header.hpp
+# HEADER            =    header.hpp
 
 SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 
 OBJECTS            =     $(SOURCES:.cpp=.o)
 
-NAME            =    hordedezombie
+NAME            =    ex03
 
 CC                =    g++
 RM                =    rm -f

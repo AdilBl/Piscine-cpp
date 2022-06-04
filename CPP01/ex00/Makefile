@@ -21,7 +21,7 @@ CFLAGS            =    -Wall -Wextra -Werror -std=c++98
 
 all:            $(NAME)
 
-$(NAME):        $(OBJECTS)
+$(NAME):        $(OBJECTS)$(HEADER)
 		$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 
 clean:
