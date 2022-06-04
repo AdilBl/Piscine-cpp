@@ -17,7 +17,8 @@ void Phonebook::Add(void)
     while (i < 5)
     {
         std::cout << this->contact->arccontact[i];
-        std::getline(std::cin, buffer);
+        if(!std::getline(std::cin, buffer))
+            exit(EXIT_SUCCESS);
         if (!buffer.empty())
         {
             this->contact[this->index % 8].Conta[i] = buffer;
