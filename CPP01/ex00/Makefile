@@ -11,7 +11,7 @@ OBJECTS            =     $(SOURCES:.cpp=.o)
 
 NAME            =    Brainz
 
-CC                =    g++
+CC                =    c++
 RM                =    rm -f
 
 CFLAGS            =    -Wall -Wextra -Werror -std=c++98

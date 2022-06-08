@@ -9,7 +9,7 @@ OBJECTS            =     $(SOURCES:.cpp=.o)
 
 NAME            =    ex00
 
-CC                =    g++
+CC                =    c++
 RM                =    rm -f
 
 CFLAGS            =    -Wall -Wextra -Werror -std=c++98

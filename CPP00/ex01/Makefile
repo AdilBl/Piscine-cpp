@@ -10,7 +10,7 @@ OBJECTS            =     $(SOURCES:.cpp=.o)
 
 NAME            =    phoneBook
 
-CC                =    g++
+CC                =    c++
 RM                =    rm -f
 
 CFLAGS            =    -Wall -Wextra -Werror -std=c++98
