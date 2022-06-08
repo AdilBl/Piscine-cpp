@@ -10,8 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Wed Jun  8 14:47:59 2022
- 
+# Make data base, printed on Wed Jun  8 16:37:13 2022
 
 # Variables
 
@@ -28,6 +27,7 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @F = $(notdir $@)
 # makefile
+ 
 CURDIR := /Users/abelache/Desktop/CPP
 # makefile
 SHELL = /bin/sh
@@ -40,11 +40,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bgk4002vwj/T/vscode-ipc-1c53aa5a-4546-44dc-9e08-b0032facf460.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bgk4002vwj/T/vscode-ipc-49dc2279-2953-483f-9923-b60f2d849f50.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.afQxkaMzSw/Render
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.X92icvIfrd/Render
 # environment
 PATH = /Users/abelache/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/opt/X11/bin
 # environment
@@ -58,11 +58,11 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.Gg8kyEsItd/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.FSimXbJv35/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = /private/tmp/com.apple.launchd.TQX1BnAHaW/org.xquartz:0
+DISPLAY = /private/tmp/com.apple.launchd.CUaY9w7A8O/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -122,7 +122,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000001.Electron
+XPC_SERVICE_NAME = com.apple.xpc.launchd.oneshot.0x10000004.Electron
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -154,7 +154,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 14805
+VSCODE_PID = 1977
 # variable set hash-table stats:
 # Load=70/1024=7%, Rehash=0, Collisions=2/91=2%
 
@@ -238,6 +238,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Wed Jun  8 14:47:59 2022
+# Finished Make data base on Wed Jun  8 16:37:13 2022
 
  
