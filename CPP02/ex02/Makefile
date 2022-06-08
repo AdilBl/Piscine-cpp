@@ -1,12 +1,13 @@
 SOURCES_FILES    =	main.cpp\
+					Fixed.cpp\
 
-# HEADER            =    header.hpp
+HEADER            =    header.hpp
 
 SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 
 OBJECTS            =     $(SOURCES:.cpp=.o)
 
-NAME            =    ex03
+NAME            =    ex02
 
 CC                =    c++
 RM                =    rm -f
@@ -18,7 +19,7 @@ CFLAGS            =    -Wall -Wextra -Werror -std=c++98
 
 all:            $(NAME)
 
-$(NAME):        $(OBJECTS)$(HEADER)
+$(NAME):        $(OBJECTS) $(HEADER)
 		$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
 
 clean:
