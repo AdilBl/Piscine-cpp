@@ -1,12 +1,8 @@
 #include"header.hpp"
 
-ScavTrap::ScavTrap(void)
+ScavTrap::ScavTrap(void): ClapTrap()
 {
     std::cout << "ScavTrap : Default constructor called" << std::endl;
-    ScavTrap::setname("Noname");
-    ScavTrap::setmana(50);
-    ScavTrap::setpdv(100);
-    ScavTrap::setdamage(20);
 }
 
 ScavTrap::~ScavTrap(void)
@@ -14,13 +10,9 @@ ScavTrap::~ScavTrap(void)
     std::cout << "ScavTrap : Destructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name)
+ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
     std::cout << "ScavTrap : Default constructor called" << std::endl;
-    ScavTrap::setname(name);
-    ScavTrap::setmana(50);
-    ScavTrap::setpdv(100);
-    ScavTrap::setdamage(20);
 }
 
 ScavTrap::ScavTrap(ScavTrap const & src)

@@ -1,8 +1,12 @@
 #include"header.hpp"
 
-FragTrap::FragTrap(void):ClapTrap()
+FragTrap::FragTrap(void)
 {
     std::cout << "FragTrap : Default constructor called" << std::endl;
+    FragTrap::setname("Noname");
+    FragTrap::setmana(50);
+    FragTrap::setpdv(100);
+    FragTrap::setdamage(20);
 }
 
 FragTrap::~FragTrap(void)
@@ -10,9 +14,13 @@ FragTrap::~FragTrap(void)
     std::cout << "FragTrap : Destructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name):ClapTrap(name)
+FragTrap::FragTrap(std::string name)
 {
     std::cout << "FragTrap : Default constructor called" << std::endl;
+    FragTrap::setname(name);
+    FragTrap::setmana(50);
+    FragTrap::setpdv(100);
+    FragTrap::setdamage(20);
 }
 
 FragTrap::FragTrap(FragTrap const & src)
