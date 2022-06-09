@@ -4,9 +4,9 @@ ClapTrap::ClapTrap(void)
 {
     std::cout << "Default constructor called" << std::endl;
     setname("Noname");
-    setmana(10);
-    setpdv(10);
-    setdamage(0);
+    setmana(100);
+    setpdv(100);
+    setdamage(30);
 }
 
 ClapTrap::~ClapTrap(void)
@@ -18,9 +18,9 @@ ClapTrap::ClapTrap(std::string name)
 {
     std::cout << "Default constructor called" << std::endl;
     setname(name);
-    setmana(10);
-    setpdv(10);
-    setdamage(0);
+    setmana(100);
+    setpdv(100);
+    setdamage(30);
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src)

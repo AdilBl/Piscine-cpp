@@ -4,7 +4,7 @@
 
 #include "header.hpp"
 
-class FragTrap : public ClapTrap
+class FragTrap : virtual public ClapTrap
 {
     private:
 

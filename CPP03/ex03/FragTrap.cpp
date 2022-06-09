@@ -1,12 +1,8 @@
 #include"header.hpp"
 
-FragTrap::FragTrap(void)
+FragTrap::FragTrap(void): ClapTrap()
 {
     std::cout << "FragTrap : Default constructor called" << std::endl;
-    FragTrap::setname("Noname");
-    FragTrap::setmana(50);
-    FragTrap::setpdv(100);
-    FragTrap::setdamage(20);
 }
 
 FragTrap::~FragTrap(void)
@@ -14,13 +10,9 @@ FragTrap::~FragTrap(void)
     std::cout << "FragTrap : Destructor called" << std::endl;
 }
 
-FragTrap::FragTrap(std::string name)
+FragTrap::FragTrap(std::string name): ClapTrap(name)
 {
     std::cout << "FragTrap : Default constructor called" << std::endl;
-    FragTrap::setname(name);
-    FragTrap::setmana(50);
-    FragTrap::setpdv(100);
-    FragTrap::setdamage(20);
 }
 
 FragTrap::FragTrap(FragTrap const & src)
@@ -34,10 +26,10 @@ FragTrap & FragTrap::operator=(FragTrap const & rhs)
 {
     if (!(this == &rhs))
     {
-        setname(rhs.FragTrap::getname());
-        setpdv(rhs.FragTrap::getpdv());
-        setmana(rhs.FragTrap::getmana());
-        setdamage(rhs.FragTrap::getdamage());
+        setname(rhs.getname());
+        setpdv(rhs.getpdv());
+        setmana(rhs.getmana());
+        setdamage(rhs.getdamage());
     }
     return (*this);
 }

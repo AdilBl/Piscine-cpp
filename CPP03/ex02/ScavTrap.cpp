@@ -26,10 +26,10 @@ ScavTrap & ScavTrap::operator=(ScavTrap const & rhs)
 {
     if (!(this == &rhs))
     {
-        setname(rhs.ScavTrap::getname());
-        setpdv(rhs.ScavTrap::getpdv());
-        setmana(rhs.ScavTrap::getmana());
-        setdamage(rhs.ScavTrap::getdamage());
+        setname(rhs.getname());
+        setpdv(rhs.getpdv());
+        setmana(rhs.getmana());
+        setdamage(rhs.getdamage());
     }
     return (*this);
 }

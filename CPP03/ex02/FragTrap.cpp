@@ -26,10 +26,10 @@ FragTrap & FragTrap::operator=(FragTrap const & rhs)
 {
     if (!(this == &rhs))
     {
-        setname(rhs.FragTrap::getname());
-        setpdv(rhs.FragTrap::getpdv());
-        setmana(rhs.FragTrap::getmana());
-        setdamage(rhs.FragTrap::getdamage());
+        setname(rhs.getname());
+        setpdv(rhs.getpdv());
+        setmana(rhs.getmana());
+        setdamage(rhs.getdamage());
     }
     return (*this);
 }
