@@ -1,6 +1,7 @@
 SOURCES_FILES    =	main.cpp\
 					ClapTrap.cpp\
-					ScavTrap.cpp
+					ScavTrap.cpp\
+					FragTrap.cpp\
 
 HEADER            =    header.hpp
 
@@ -8,7 +9,7 @@ SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 
 OBJECTS            =     $(SOURCES:.cpp=.o)
 
-NAME            =    ex01
+NAME            =    ex02
 
 CC                =    c++
 RM                =    rm -f
