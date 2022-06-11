@@ -6,9 +6,9 @@
 # include <string>
 # include <iomanip>
 # include <cmath>
-# include "ClapTrap.hpp"
-# include "ScavTrap.hpp"
-
-
+# include "Animale.hpp"
+# include "Brain.hpp"
+# include "Dog.hpp"
+# include "Cat.hpp"
 
 #endif
