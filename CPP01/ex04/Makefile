@@ -11,15 +11,15 @@ NAME            =    ex04
 CC                =    c++
 RM                =    rm -f
 
-CFLAGS            =    -Wall -Wextra -Werror -std=c++98
+FLAGS            =    -Wall -Wextra -Werror -std=c++98
 
-.c.o:
-		$(CC) $(CFLAGS) -cpp $< -o $(<:.cpp=.o)
+.cpp.o:$(HEADER)$(MAKEFILE)
+		$(CC) $(FLAGS) -c $< -o $(<:.cpp=.o)
 
 all:            $(NAME)
 
-$(NAME):        $(OBJECTS) $(HEADER)
-		$(CC) $(CFLAGS) $(OBJECTS) -o $(NAME)
+$(NAME):        $(OBJECTS) $(HEADER)$(MAKEFILE)
+		$(CC) $(FLAGS) $(OBJECTS) -o $(NAME)
 
 clean:
 		$(RM) $(OBJECTS)
