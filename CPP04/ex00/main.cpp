@@ -14,5 +14,10 @@ int main()
     const Wronganimale* d = new WrongCat();
     std::cout << d->getType() << " " << std::endl;
     d->makeSound();
+
+    delete meta;
+    delete j;
+    delete i;
+    delete d;
     return 0;
 }

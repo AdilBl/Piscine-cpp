@@ -1,4 +1,8 @@
 SOURCES_FILES    =	main.cpp\
+					Cat.cpp\
+					Dog.cpp\
+					Animale.cpp\
+					Brain.cpp\
 
 HEADER            =    header.hpp
 

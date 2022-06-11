@@ -7,6 +7,7 @@
 class Cat : public Animale
 {
     private:
+        Brain*  _Brain;
     public:
         Cat(void);
         Cat(Cat const & src);
