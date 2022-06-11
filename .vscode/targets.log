@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Jun 11 16:47:00 2022
+# Make data base, printed on Sat Jun 11 17:08:37 2022
 
 # Variables
 
@@ -86,6 +86,7 @@ ZSH = /Users/abelache/.oh-my-zsh
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # automatic
 ^D = $(patsubst %/,%,$(dir $^))
+ 
 # environment
 XPC_FLAGS = 0x0
 # default
@@ -237,6 +238,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sat Jun 11 16:47:00 2022
+# Finished Make data base on Sat Jun 11 17:08:37 2022
 
  

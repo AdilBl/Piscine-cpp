@@ -6,7 +6,7 @@ SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 
 OBJECTS            =     $(SOURCES:.cpp=.o)
 
-NAME            =    ex03
+NAME            =    ex02
 
 CC                =    c++
 RM                =    rm -f
