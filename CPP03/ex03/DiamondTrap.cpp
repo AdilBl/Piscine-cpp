@@ -1,6 +1,6 @@
 #include "header.hpp"
 
-DiamondTrap::DiamondTrap(void): ClapTrap("noname_clap_name") , FragTrap() , ScavTrap()
+DiamondTrap::DiamondTrap(void): ClapTrap("noname_clap_name") , ScavTrap(), FragTrap()
 {
     std::cout << "DiamondTrap : Default constructor called" << std::endl;
     this->_name = "noname";
@@ -14,7 +14,7 @@ DiamondTrap::~DiamondTrap(void)
     std::cout << "DiamondTrap : Destructor called" << std::endl;
 }
 
-DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name") , FragTrap(name) , ScavTrap(name)
+DiamondTrap::DiamondTrap(std::string name): ClapTrap(name + "_clap_name") , ScavTrap(name) , FragTrap(name)
 {
     std::cout << "DiamondTrap : Default constructor called" << std::endl;
     this->_name = name;
