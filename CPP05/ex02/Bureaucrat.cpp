@@ -11,7 +11,6 @@ Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
         else
         {
             this->_grade = grade;
-            std::cout << "Bureaucrat get created" << std::endl;
         }
     }
     catch(Bureaucrat::GradeTooLowException& e)
@@ -20,13 +19,12 @@ Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
     }
     catch(Bureaucrat::GradeTooHighException& e)
     {
-        std::cout<< e.what() << std::endl;  
+        std::cout<< e.what() << std::endl;
     }
 }
 
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat get destroy" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & src):_name(src.getname())
@@ -34,6 +32,14 @@ Bureaucrat::Bureaucrat(Bureaucrat const & src):_name(src.getname())
     *this = src;
 
     return;
+}
+
+void Bureaucrat::signForm(Form Formulaire)
+{
+    if (Formulaire.getsigned())
+        std::cout << getname() << " signed " << Formulaire.getname() << std::endl;
+    else
+        std::cout << getname() << " couldn't signed " << Formulaire.getname() << std::endl;
 }
 
 void Bureaucrat::decrementation(void)
@@ -62,7 +68,7 @@ void Bureaucrat::incrementation(void)
     }
     catch (Bureaucrat::GradeTooHighException& e)
     {
-        std::cout<< e.what() << std::endl;;
+        std::cout<< e.what() << std::endl;
     }
 }
 
@@ -80,7 +86,6 @@ Bureaucrat & Bureaucrat::operator=(Bureaucrat const & rhs)
 {
     if (!(this == &rhs))
     {
-        // this->_name = rhs._name;
         this->_grade = rhs._grade;
     }
     return (*this);

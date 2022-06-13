@@ -2,6 +2,8 @@
 # ifndef BUREAUCRAT_HPP
 # define BUREAUCRAT_HPP
 
+
+#include "Form.hpp"
 #include "header.hpp"
 
 class Bureaucrat
@@ -19,6 +21,7 @@ class Bureaucrat
         std::string getname(void) const;
         std::string speach(void) const;
         int         getgrade(void) const;
+        void        signForm(Form formulaire);
         Bureaucrat & operator=(Bureaucrat const & rhs);
         class GradeTooHighException : public std::exception
         {
