@@ -15,7 +15,7 @@ NAME            =    ex02
 CC                =    c++
 RM                =    rm -f
 
-FLAGS            =    -Wall -Wextra -Werror -std=c++98
+FLAGS            =    -Wall -Wextra-Werro r -std=c++98
 
 .cpp.o:$(HEADER)$(MAKEFILE)
 		$(CC) $(FLAGS) -c $< -o $(<:.cpp=.o)
