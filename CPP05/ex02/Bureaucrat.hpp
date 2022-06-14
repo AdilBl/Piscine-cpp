@@ -22,6 +22,7 @@ class Bureaucrat
         std::string speach(void) const;
         int         getgrade(void) const;
         void        signForm(Form formulaire);
+        void        executeForm(Form const & form);
         Bureaucrat & operator=(Bureaucrat const & rhs);
         class GradeTooHighException : public std::exception
         {

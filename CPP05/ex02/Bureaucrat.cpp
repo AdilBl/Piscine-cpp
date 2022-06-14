@@ -34,14 +34,31 @@ Bureaucrat::Bureaucrat(Bureaucrat const & src):_name(src.getname())
     return;
 }
 
-void Bureaucrat::signForm(Form Formulaire)
+void Bureaucrat::signForm(Form & form)
 {
-    if (Formulaire.getsigned())
-        std::cout << getname() << " signed " << Formulaire.getname() << std::endl;
-    else
-        std::cout << getname() << " couldn't signed " << Formulaire.getname() << std::endl;
+    try 
+    {
+        form.beSigned(*this);
+        std::cout << this->_name << " signed " << form.getName() << std::endl;
+    }
+    catch (std::exception const & error)
+    {
+        std::cout << this->_name  << " couldn’t sign " << form.getName() << " because " << error.what() << std::endl;
+    }           
 }
 
+void Bureaucrat::executeForm(Form const & form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << this->getName() << " execute " << form.getName() << std::endl;
+    }
+    catch (std::exception const & e)
+    {
+        std::cout << this->_name  << " couldn’t execute " << form.getName() << " because " << e.what() << std::endl;
+    }
+}
 void Bureaucrat::decrementation(void)
 {
     try
@@ -98,6 +115,7 @@ std::string Bureaucrat::speach(void) const
     speach.append(",bureaucrat grade: ");
     return(speach);
 }
+
 std::ostream &  operator<<(std::ostream & o, Bureaucrat const & i)
 {
     o << i.speach();
