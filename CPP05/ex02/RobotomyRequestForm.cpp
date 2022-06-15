@@ -29,6 +29,7 @@ void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
         if (!Form::getsigned())
             throw   Notsigned();
         std::cout << "VRRRRRRTTRTRTRTRTTRTRTRTRTRTRTRR" << std::endl;
+        std::srand(time(0));
         if(std::rand() % 2 == 0)
             std::cout << gettarger() << " A etait robotomisée avec succés" << std::endl;
         else

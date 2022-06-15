@@ -2,7 +2,7 @@
 #ifndef PRESIDENTIALPARDONFORM_HPP
 # define PRESIDENTIALPARDONFORM_HPP
 
-class RobotomyRequestForm :  public Form
+class PresidentialPardonForm :  public Form
 {
     private:
         std::string _target;

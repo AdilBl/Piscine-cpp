@@ -9,7 +9,7 @@ int main()
     Bureaucrat  smith = Bureaucrat("Smith", 3);
     ShrubberyCreationForm test2 = ShrubberyCreationForm("Test");
     RobotomyRequestForm test3 = RobotomyRequestForm("Test");
-    PresidentialPardonForm test4 = PRESIDENTIALPARDONFORM_HPP("Smith");
+    PresidentialPardonForm test4 = PresidentialPardonForm("Smith");
 
     test2.execute(test);
     test2.execute(smith);
@@ -18,6 +18,6 @@ int main()
     test2.execute(smith);
     test3.besigned(smith);
     test3.execute(smith);
-    test3.besigned(smith);
-    test3.execute(smith);
+    test4.besigned(smith);
+    test4.execute(smith);
 }
