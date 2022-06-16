@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Thu Jun 16 17:25:10 2022
+# Make data base, printed on Thu Jun 16 17:58:35 2022
 
 # Variables
 
@@ -25,7 +25,6 @@ VSCODE_LOG_NATIVE = false
 # automatic
 @D = $(patsubst %/,%,$(dir $@))
 # automatic
- 
 @F = $(notdir $@)
 # makefile
 CURDIR := /Users/abelache/Desktop/CPP
@@ -234,6 +233,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Thu Jun 16 17:25:10 2022
+# Finished Make data base on Thu Jun 16 17:58:35 2022
 
  
