@@ -1,6 +1,7 @@
 SOURCES_FILES    =	main.cpp\
+					Span.cpp\
 
-HEADER            =   whatever.hpp
+HEADER            =   Span.hpp
 
 SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 
