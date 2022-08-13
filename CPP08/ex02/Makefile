@@ -1,6 +1,6 @@
 SOURCES_FILES    =	main.cpp\
 
-HEADER            =   easyfind.hpp
+HEADER            = MutantStack.hpp
 
 SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 
