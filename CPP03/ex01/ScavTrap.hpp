@@ -1,7 +1,11 @@
 #ifndef ScavTrap_HPP
 # define ScavTrap_HPP
 
-#include "header.hpp"
+# include <iostream>
+# include <string>
+# include <iomanip>
+# include <cmath>
+# include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
 {
@@ -14,9 +18,7 @@ class ScavTrap : public ClapTrap
         ~ScavTrap(void);
 
         ScavTrap & operator=(ScavTrap const & rhs);
-        void attack(const std::string& target);
-        void takeDamage(unsigned int amount);
-        void beRepaired(unsigned int amount);        
+        void attack(const std::string& target);      
         void guardGate(void);
 };
 

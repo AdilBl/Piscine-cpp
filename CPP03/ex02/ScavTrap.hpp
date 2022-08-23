@@ -1,7 +1,11 @@
 #ifndef ScavTrap_HPP
 # define ScavTrap_HPP
 
-#include "header.hpp"
+# include <iostream>
+# include <string>
+# include <iomanip>
+# include <cmath>
+# include "ClapTrap.hpp"
 
 class ScavTrap : public ClapTrap
 {

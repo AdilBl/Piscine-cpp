@@ -1,7 +1,7 @@
 SOURCES_FILES    =	main.cpp\
 					ClapTrap.cpp\
 
-HEADER            =    header.hpp
+HEADER            =    ClapTrap.hpp
 
 SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 

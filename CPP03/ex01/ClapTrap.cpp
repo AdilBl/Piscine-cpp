@@ -1,12 +1,12 @@
-#include "header.hpp"
+# include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(void)
 {
     std::cout << "Default constructor called" << std::endl;
     setname("Noname");
-    setmana(50);
-    setpdv(100);
-    setdamage(20);
+    setmana(10);
+    setpdv(10);
+    setdamage(0);
 }
 
 ClapTrap::~ClapTrap(void)
@@ -18,9 +18,9 @@ ClapTrap::ClapTrap(std::string name)
 {
     std::cout << "Default constructor called" << std::endl;
     setname(name);
-    setmana(50);
-    setpdv(100);
-    setdamage(20);
+    setmana(10);
+    setpdv(10);
+    setdamage(0);
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src)

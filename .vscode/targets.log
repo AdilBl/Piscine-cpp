@@ -10,7 +10,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 make: *** No rule to make target `all'.  Stop.
 
 
-# Make data base, printed on Sat Jun 18 15:56:28 2022
+# Make data base, printed on Tue Aug 23 15:35:59 2022
 
 # Variables
 
@@ -39,12 +39,11 @@ MAKEFILE_LIST :=
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bgk4002vwj/T/vscode-ipc-5fe2fffd-c0bf-4b1a-82a0-347cc6123d5c.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/zz/zyxvpxvq6csfxvn_n000bgk4002vwj/T/vscode-ipc-31e47239-4482-489e-a45c-d071a9575665.sock
 # environment
 VSCODE_CWD = /
 # environment
-Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.s7qdt5XFdV/Render
- 
+Apple_PubSub_Socket_Render = /private/tmp/com.apple.launchd.sMi0NZfWFC/Render
 # environment
 PATH = /Users/abelache/.brew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/munki:/opt/X11/bin
 # environment
@@ -58,11 +57,11 @@ ELECTRON_RUN_AS_NODE = 1
 # default
 .FEATURES := target-specific order-only second-expansion else-if archives jobserver check-symlink
 # environment
-SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.4eQmpvKFJY/Listeners
+SSH_AUTH_SOCK = /private/tmp/com.apple.launchd.OCkMbFrEPd/Listeners
 # automatic
 %F = $(notdir $%)
 # environment
-DISPLAY = /private/tmp/com.apple.launchd.6igixJio9U/org.xquartz:0
+DISPLAY = /private/tmp/com.apple.launchd.v191GBeAm2/org.xquartz:0
 # environment
 VSCODE_PIPE_LOGGING = true
 # environment
@@ -122,7 +121,7 @@ MFLAGS = -Rrqp
 # automatic
 *D = $(patsubst %/,%,$(dir $*))
 # environment
-XPC_SERVICE_NAME = com.microsoft.VSCode.2516
+XPC_SERVICE_NAME = com.microsoft.VSCode.2488
 # automatic
 +D = $(patsubst %/,%,$(dir $+))
 # automatic
@@ -150,7 +149,7 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 81660
+VSCODE_PID = 10050
 # variable set hash-table stats:
 # Load=68/1024=7%, Rehash=0, Collisions=2/89=2%
 
@@ -234,6 +233,6 @@ GNUmakefile:
 # strcache size: total = 0 / max = 0 / min = 4096 / avg = 0
 # strcache free: total = 0 / max = 0 / min = 4096 / avg = 0
 
-# Finished Make data base on Sat Jun 18 15:56:28 2022
+# Finished Make data base on Tue Aug 23 15:35:59 2022
 
  

@@ -1,8 +1,11 @@
-#include"header.hpp"
+# include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void):ClapTrap()
 {
     std::cout << "ScavTrap : Default constructor called" << std::endl;
+    setdamage(20);
+    setpdv(100);
+    setmana(100);
 }
 
 ScavTrap::~ScavTrap(void)
@@ -13,6 +16,9 @@ ScavTrap::~ScavTrap(void)
 ScavTrap::ScavTrap(std::string name):ClapTrap(name)
 {
     std::cout << "ScavTrap : Default constructor called" << std::endl;
+    setdamage(20);
+    setpdv(100);
+    setmana(100);
 }
 
 ScavTrap::ScavTrap(ScavTrap const & src)

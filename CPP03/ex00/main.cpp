@@ -1,4 +1,8 @@
-#include "header.hpp"
+# include <iostream>
+# include <string>
+# include <iomanip>
+# include <cmath>
+# include "ClapTrap.hpp"
 
 int main(void)
 {

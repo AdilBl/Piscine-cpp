@@ -1,7 +1,10 @@
 #ifndef CLAPTRAP_HPP
 # define CLAPTRAP_HPP
 
-#include "header.hpp"
+# include <iostream>
+# include <string>
+# include <iomanip>
+# include <cmath>
 
 class ClapTrap
 {

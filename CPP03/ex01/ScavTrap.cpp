@@ -1,8 +1,11 @@
-#include"header.hpp"
+# include "ScavTrap.hpp"
 
 ScavTrap::ScavTrap(void): ClapTrap()
 {
     std::cout << "ScavTrap : Default constructor called" << std::endl;
+    setdamage(20);
+    setpdv(100);
+    setmana(100);
 }
 
 ScavTrap::~ScavTrap(void)
@@ -13,6 +16,9 @@ ScavTrap::~ScavTrap(void)
 ScavTrap::ScavTrap(std::string name): ClapTrap(name)
 {
     std::cout << "ScavTrap : Default constructor called" << std::endl;
+    setdamage(20);
+    setpdv(100);
+    setmana(100);
 }
 
 ScavTrap::ScavTrap(ScavTrap const & src)
@@ -50,39 +56,6 @@ void ScavTrap::attack (const std::string& target)
             std::cout << "No heals to attack" << std::endl;
     }
     return;
-}
-
-void ScavTrap::beRepaired (unsigned int amount)
-{
-    if(getmana() >= 0 && getpdv() >= 0)
-    {
-        std::cout << "ScavTrap " <<  getname() << "repair, causing " << amount << " points of healing" << std::endl;
-        setmana(getmana() - 1);
-        setpdv(getpdv() + amount);
-        return;
-    }
-    else
-    {
-        if(getmana() <= 0)
-            std::cout << "No mana to repair" << std::endl;
-        if(getpdv() <= 0)
-            std::cout << "No heals to repair" << std::endl;
-    }
-    return;
-}
-
-void ScavTrap::takeDamage(unsigned int amount)
-{
-    setpdv(getpdv() - amount);
-    if (getpdv() <= 0)
-    {
-        std::cout << "ScavTrap " <<  getname() << " Take damage, lose " << amount << " of heals" << std::endl;
-        std::cout << "ScavTrap " << getname() << " die" << std::endl;
-    }
-    else
-    {
-        std::cout << "ScavTrap " <<  getname() << " Take damage, lose " << amount << " of heals" << std::endl;
-    }
 }
 
 void ScavTrap::guardGate(void)

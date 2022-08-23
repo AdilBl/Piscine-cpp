@@ -1,4 +1,4 @@
-#include "header.hpp"
+# include "DiamondTrap.hpp"
 
 DiamondTrap::DiamondTrap(void): ClapTrap("noname_clap_name") , ScavTrap(), FragTrap()
 {
