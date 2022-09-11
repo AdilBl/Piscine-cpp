@@ -8,12 +8,13 @@ Cat::Cat(void):Animale("Cat")
 
 Cat::~Cat(void)
 {
-    delete(this->_Brain);
+    delete this->_Brain;
     std::cout << "Cat get destroy" << std::endl;
 }
 
 Cat::Cat(Cat const & src):Animale("Cat")
 {
+    this->_Brain = new Brain();
     *this = src;
 
     return;
@@ -24,7 +25,7 @@ Cat & Cat::operator=(Cat const & rhs)
     if (!(this == &rhs))
     {
         this->type = rhs.type;
-        this->_Brain = rhs._Brain;
+        *this->_Brain = *rhs._Brain;
     }
     return (*this);
 }

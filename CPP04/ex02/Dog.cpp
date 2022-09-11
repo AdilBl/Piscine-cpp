@@ -14,6 +14,7 @@ Dog::~Dog(void)
 
 Dog::Dog(Dog const & src):Animale("Dog")
 {
+    this->_Brain = new Brain();
     *this = src;
 
     return;
@@ -24,7 +25,7 @@ Dog & Dog::operator=(Dog const & rhs)
     if (!(this == &rhs))
     {
         this->type = rhs.type;
-        this->_Brain = rhs._Brain;
+        *this->_Brain = *rhs._Brain;
     }
     return (*this);
 }
