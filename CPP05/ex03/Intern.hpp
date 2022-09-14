@@ -14,6 +14,14 @@ class Intern
 
         std::string stringtoupper(std::string str);
         Form * makeForm(std::string formulaire, std::string target);
+        class Noformfound : public std::exception
+        {
+            public:
+                virtual const char* what() const throw()
+                {
+                    return ("Problem: No form found");
+                }
+        };
 };
 
 

@@ -1,6 +1,6 @@
 #include "header.hpp"
 
-Form::Form(std::string name, int gradetoexecute, int gradetosign):_name(name)
+Form::Form(std::string name, int gradetoexecute, int gradetosign):_name(name),_gradetosign(gradetosign),_gradetoexecute(gradetoexecute)
 {
     try
     {
@@ -10,8 +10,6 @@ Form::Form(std::string name, int gradetoexecute, int gradetosign):_name(name)
             throw GradeTooLowException();
         else
         {
-            this->_gradetoexecute = gradetoexecute;
-            this->_gradetosign = gradetosign;
             this->signé = false;
         }
     }
@@ -74,7 +72,7 @@ std::string Form::getname(void) const
     return(this->_name);
 }
 
-Form::Form(Form const & src):_name(src._name)
+Form::Form(Form const & src):_name(src._name),_gradetosign(src._gradetosign),_gradetoexecute(src._gradetoexecute)
 {
     *this = src;
 
@@ -85,8 +83,6 @@ Form & Form::operator=(Form const & rhs)
 {
     if (!(this == &rhs))
     {
-        this->_gradetoexecute = rhs._gradetoexecute;
-        this->_gradetosign = rhs._gradetosign;
         this->signé = rhs.signé;
     }
     return (*this);

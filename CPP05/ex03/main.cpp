@@ -9,7 +9,14 @@ int main()
     Bureaucrat Smith = Bureaucrat("Smith", 12);
     Form* rrf;
 
-    rrf = someRandomIntern.makeForm("robotomy request", "Bender");
-    rrf->besigned(Smith);
-    rrf->execute(Smith);
+    try
+    {
+        rrf = someRandomIntern.makeForm("ROBOTOMY REQUEST", "Bender");
+        rrf->besigned(Smith);
+        rrf->execute(Smith);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
 }

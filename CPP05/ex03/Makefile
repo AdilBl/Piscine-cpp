@@ -1,12 +1,6 @@
-SOURCES_FILES    =	main.cpp\
-					Bureaucrat.cpp\
-					Form.cpp\
-					ShrubberyCreationForm.cpp\
-					RobotomyRequestForm.cpp\
-					PresidentialPardonForm.cpp\
-					Intern.cpp
+SOURCES_FILES    =	$(shell find . -type f -name "*.cpp")
 
-HEADER            =   header.hpp
+HEADER            =   $(shell find . -type f -name "*.hpp")
 
 SOURCES            =    $(addprefix ./, $(SOURCES_FILES))
 

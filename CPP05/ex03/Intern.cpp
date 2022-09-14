@@ -37,21 +37,22 @@ Form * Intern::makeForm(std::string Formul, std::string target)
     Form * listeFormC[3];
 
     listeFormC[0] = new RobotomyRequestForm(target);
-    listeFormC[1] = new ShrubberyCreationForm(target);
-    listeFormC[2] = new PresidentialPardonForm(target);
-    std::cout << formulaire <<std::endl;
+    listeFormC[2] = new ShrubberyCreationForm(target);
+    listeFormC[1] = new PresidentialPardonForm(target);
     for (int i = 0; i < 3; i++)
     {
         if (formulaire == this->allFormulaire[i])
+        {
             save = i;
+            break;
+        }
         else
             delete (listeFormC[i]);
     }
-    std::cout << save << std::endl;
     if (save == -1)
     {
-        std::cout << "Le formulaire n'existe pas" << std::endl;
-        return (NULL);
+        throw Noformfound();
+        return (0);
     }
     else
     {
