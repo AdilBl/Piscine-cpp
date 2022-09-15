@@ -11,7 +11,7 @@ int main()
 
     try
     {
-        rrf = someRandomIntern.makeForm("ROBOTOMY REQUEST", "Bender");
+        rrf = someRandomIntern.makeForm("SHRUBBERY CREATION", "Bender");
         rrf->besigned(Smith);
         rrf->execute(Smith);
     }
@@ -19,4 +19,5 @@ int main()
     {
         std::cerr << e.what() << '\n';
     }
+    delete(rrf);
 }

@@ -44,7 +44,6 @@ Form * Intern::makeForm(std::string Formul, std::string target)
         if (formulaire == this->allFormulaire[i])
         {
             save = i;
-            break;
         }
         else
             delete (listeFormC[i]);
