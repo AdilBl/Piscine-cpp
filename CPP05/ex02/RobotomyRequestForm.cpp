@@ -22,27 +22,16 @@ std::string RobotomyRequestForm::gettarger(void) const
 
 void    RobotomyRequestForm::execute(Bureaucrat const & executor) const
 {
-    try
-    {
-        if (executor.getgrade() > getgradetoexecute())
-            throw   GradeTooLowException();
-        if (!Form::getsigned())
-            throw   Notsigned();
-        std::cout << "VRRRRRRTTRTRTRTRTTRTRTRTRTRTRTRR" << std::endl;
-        std::srand(time(0));
-        if(std::rand() % 2 == 0)
-            std::cout << gettarger() << " A etait robotomisée avec succés" << std::endl;
-        else
-            std::cout << gettarger() << " Robotomisation raté" << std::endl;
-    }
-    catch(GradeTooLowException & e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    catch(Notsigned & e)
-    {
-        std::cout << e.what() << std::endl;
-    }
+    if (executor.getgrade() > getgradetoexecute())
+        throw   GradeTooLowException();
+    if (!Form::getsigned())
+        throw   Notsigned();
+    std::cout << "VRRRRRRTTRTRTRTRTTRTRTRTRTRTRTRR" << std::endl;
+    std::srand(time(0));
+    if(std::rand() % 2 == 0)
+        std::cout << gettarger() << " A etait robotomisée avec succés" << std::endl;
+    else
+        std::cout << gettarger() << " Robotomisation raté" << std::endl;
 }
 
 RobotomyRequestForm & RobotomyRequestForm::operator=(RobotomyRequestForm const & rhs)

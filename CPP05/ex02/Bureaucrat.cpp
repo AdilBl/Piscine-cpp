@@ -2,24 +2,13 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
 {
-    try
+    if (grade < 1)
+        throw Bureaucrat::GradeTooHighException();
+    else if (grade > 150)
+        throw Bureaucrat::GradeTooLowException();
+    else
     {
-        if (grade < 1)
-            throw Bureaucrat::GradeTooHighException();
-        else if (grade > 150)
-            throw Bureaucrat::GradeTooLowException();
-        else
-        {
-            this->_grade = grade;
-        }
-    }
-    catch(Bureaucrat::GradeTooLowException& e)
-    {
-        std::cout<< e.what() << std::endl;
-    }
-    catch(Bureaucrat::GradeTooHighException& e)
-    {
-        std::cout<< e.what() << std::endl;
+        this->_grade = grade;
     }
 }
 
@@ -36,57 +25,29 @@ Bureaucrat::Bureaucrat(Bureaucrat const & src):_name(src.getname())
 
 void Bureaucrat::signForm(Form & form)
 {
-    try 
-    {
-        form.besigned(*this);
-        std::cout << this->_name << " signed " << form.getname() << std::endl;
-    }
-    catch (std::exception const & error)
-    {
-        std::cout << this->_name  << " couldn’t sign " << form.getname() << " because " << error.what() << std::endl;
-    }           
+    form.besigned(*this);
+    std::cout << this->_name << " signed " << form.getname() << std::endl;          
 }
 
 void Bureaucrat::executeForm(Form const & form)
 {
-    try
-    {
-        form.execute(*this);
-        std::cout << this->getname() << " execute " << form.getname() << std::endl;
-    }
-    catch (std::exception const & e)
-    {
-        std::cout << this->_name  << " couldn’t execute " << form.getname() << " because " << e.what() << std::endl;
-    }
+    form.execute(*this);
+    std::cout << this->getname() << " execute " << form.getname() << std::endl;
 }
 void Bureaucrat::decrementation(void)
 {
-    try
-    {
-        if (getgrade() + 1 > 150)
-            throw Bureaucrat::GradeTooLowException();
-        else
-            this->_grade++;
-    }
-    catch (Bureaucrat::GradeTooLowException& e)
-    {
-        std::cout<< e.what() << std::endl;
-    }
+    if (getgrade() + 1 > 150)
+        throw Bureaucrat::GradeTooLowException();
+    else
+        this->_grade++;
 }
 
 void Bureaucrat::incrementation(void)
 {
-    try
-    {
-        if (getgrade() - 1 < 1)
-            throw Bureaucrat::GradeTooHighException();
-        else
-            this->_grade--;
-    }
-    catch (Bureaucrat::GradeTooHighException& e)
-    {
-        std::cout<< e.what() << std::endl;
-    }
+    if (getgrade() - 1 < 1)
+        throw Bureaucrat::GradeTooHighException();
+    else
+        this->_grade--;
 }
 
 int    Bureaucrat::getgrade(void) const

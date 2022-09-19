@@ -2,24 +2,13 @@
 
 Form::Form(std::string name, int gradetoexecute, int gradetosign):_name(name),_gradetosign(gradetosign),_gradetoexecute(gradetoexecute)
 {
-    try
+    if (gradetoexecute < 1 || gradetosign < 1)
+        throw GradeTooHighException();
+    else if (gradetoexecute > 150 || gradetosign > 150)
+        throw GradeTooLowException();
+    else
     {
-        if (gradetoexecute < 1 || gradetosign < 1)
-            throw GradeTooHighException();
-        else if (gradetoexecute > 150 || gradetosign > 150)
-            throw GradeTooLowException();
-        else
-        {
-            this->signé = false;
-        }
-    }
-    catch(GradeTooHighException& e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    catch(GradeTooLowException& e)
-    {
-        std::cout << e.what() << std::endl;
+        this->signé = false;
     }
 }
 
@@ -29,28 +18,17 @@ Form::~Form()
 
 void Form::besigned(Bureaucrat Bureau)
 {
-    try
+    if (Bureau.getgrade() > this->_gradetosign)
     {
-        if (Bureau.getgrade() > this->_gradetosign)
-        {
-            throw GradeTooLowException();
-            Bureau.signForm(*this);
-        }
-        else if (this->signé)
-            throw Alreadysign();
-        else
-        {
-            this->signé = true;
-            Bureau.signForm(*this);
-        }
+        throw GradeTooLowException();
+        Bureau.signForm(*this);
     }
-    catch(GradeTooLowException& e)
+    else if (this->signé)
+        throw Alreadysign();
+    else
     {
-        std::cout << e.what() << std::endl;
-    }
-    catch(Alreadysign& e)
-    {
-        std::cout << e.what() << std::endl;
+        this->signé = true;
+        Bureau.signForm(*this);
     }
 }
 

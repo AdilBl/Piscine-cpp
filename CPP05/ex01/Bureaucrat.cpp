@@ -2,24 +2,13 @@
 
 Bureaucrat::Bureaucrat(std::string name, int grade):_name(name)
 {
-    try
+    if (grade < 1)
+        throw Bureaucrat::GradeTooHighException();
+    else if (grade > 150)
+        throw Bureaucrat::GradeTooLowException();
+    else
     {
-        if (grade < 1)
-            throw Bureaucrat::GradeTooHighException();
-        else if (grade > 150)
-            throw Bureaucrat::GradeTooLowException();
-        else
-        {
-            this->_grade = grade;
-        }
-    }
-    catch(Bureaucrat::GradeTooLowException& e)
-    {
-        std::cout<< e.what() << std::endl;
-    }
-    catch(Bureaucrat::GradeTooHighException& e)
-    {
-        std::cout<< e.what() << std::endl;
+        this->_grade = grade;
     }
 }
 
@@ -44,32 +33,18 @@ void Bureaucrat::signForm(Form Formulaire)
 
 void Bureaucrat::decrementation(void)
 {
-    try
-    {
-        if (getgrade() + 1 > 150)
-            throw Bureaucrat::GradeTooLowException();
-        else
-            this->_grade++;
-    }
-    catch (Bureaucrat::GradeTooLowException& e)
-    {
-        std::cout<< e.what() << std::endl;
-    }
+    if (getgrade() + 1 > 150)
+        throw Bureaucrat::GradeTooLowException();
+    else
+        this->_grade++;
 }
 
 void Bureaucrat::incrementation(void)
 {
-    try
-    {
-        if (getgrade() - 1 < 1)
-            throw Bureaucrat::GradeTooHighException();
-        else
-            this->_grade--;
-    }
-    catch (Bureaucrat::GradeTooHighException& e)
-    {
-        std::cout<< e.what() << std::endl;
-    }
+    if (getgrade() - 1 < 1)
+        throw Bureaucrat::GradeTooHighException();
+    else
+        this->_grade--;
 }
 
 int    Bureaucrat::getgrade(void) const

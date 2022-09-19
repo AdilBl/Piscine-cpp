@@ -22,38 +22,27 @@ std::string ShrubberyCreationForm::gettarger(void) const
 
 void    ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-    try
-    {
-        if (executor.getgrade() > getgradetoexecute())
-            throw   GradeTooLowException();
-        if (!Form::getsigned())
-            throw   Notsigned();
-        std::ofstream file;
+    if (executor.getgrade() > getgradetoexecute())
+        throw   GradeTooLowException();
+    if (!Form::getsigned())
+        throw   Notsigned();
+    std::ofstream file;
 
-        std::string nameFile = this->_target + "_shrubbery";
+    std::string nameFile = this->_target + "_shrubbery";
 
-        file.open(nameFile.c_str());
-        if (file.is_open())
-        {
-            file <<
-                "     *    " << std::endl <<        
-                "     #    " << std::endl <<
-                "    ###   " << std::endl <<
-                "   #####  " << std::endl <<
-                "  ####### " << std::endl <<
-                "     #    " << std::endl <<
-                "     #    " << std::endl;
-        }
-        file.close();
-    }
-    catch(GradeTooLowException & e)
+    file.open(nameFile.c_str());
+    if (file.is_open())
     {
-        std::cout << e.what() << std::endl;
+        file <<
+            "     *    " << std::endl <<        
+            "     #    " << std::endl <<
+            "    ###   " << std::endl <<
+            "   #####  " << std::endl <<
+            "  ####### " << std::endl <<
+            "     #    " << std::endl <<
+            "     #    " << std::endl;
     }
-    catch(Notsigned & e)
-    {
-        std::cout << e.what() << std::endl;
-    }
+    file.close();
 }
 
 ShrubberyCreationForm & ShrubberyCreationForm::operator=(ShrubberyCreationForm const & rhs)

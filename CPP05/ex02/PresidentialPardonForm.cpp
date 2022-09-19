@@ -22,22 +22,11 @@ std::string PresidentialPardonForm::gettarger(void) const
 
 void    PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-    try
-    {
-        if (executor.getgrade() > getgradetoexecute())
-            throw   GradeTooLowException();
-        if (!Form::getsigned())
-            throw   Notsigned();
-        std::cout << "La " << this->_target << " a été pardonnée par Zaphod Beeblebrox." << std::endl;
-    }
-    catch(GradeTooLowException & e)
-    {
-        std::cout << e.what() << std::endl;
-    }
-    catch(Notsigned & e)
-    {
-        std::cout << e.what() << std::endl;
-    }
+    if (executor.getgrade() > getgradetoexecute())
+        throw   GradeTooLowException();
+    if (!Form::getsigned())
+        throw   Notsigned();
+    std::cout << "La " << this->_target << " a été pardonnée par Zaphod Beeblebrox." << std::endl;
 }
 
 PresidentialPardonForm & PresidentialPardonForm::operator=(PresidentialPardonForm const & rhs)
